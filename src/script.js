@@ -63,11 +63,32 @@ controls.enableDamping = true;
 /**
  * Asteroids
  */
-const asteroid = new THREE.Mesh(
-  new THREE.IcosahedronGeometry(2, 0),
-  new THREE.MeshStandardMaterial({ color: 0x888888 })
-);
-scene.add(asteroid);
+const generateAsteroids = (numOfAsteroids) => {
+  const asteroidGeometry = new THREE.IcosahedronGeometry(1, 0);
+  const asteroidMaterial = new THREE.MeshStandardMaterial({ color: 0x888888 });
+
+  for (let i = 0; i < numOfAsteroids; i++) {
+    const asteroid = new THREE.Mesh(asteroidGeometry, asteroidMaterial);
+    asteroid.position.x = (Math.random() - 0.5) * 100;
+    asteroid.position.y = (Math.random() - 0.5) * 100;
+    asteroid.position.z = (Math.random() - 0.5) * 100;
+    // Random scale for size variety
+    asteroid.scale.multiplyScalar(Math.random() * 2 + 0.5);
+    scene.add(asteroid);
+  }
+};
+
+generateAsteroids(50);
+
+/**
+ * Player's Ship
+ */
+const shipGeometry = new THREE.ConeGeometry(2, 5, 4);
+const shipMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+const ship = new THREE.Mesh(shipGeometry, shipMaterial);
+ship.position.set(0, -7, 5); // Position the ship closer to the camera
+ship.rotation.x = -0.3 * Math.PI; // Rotate the ship to face "forward"
+scene.add(ship);
 
 /**
  * Light
@@ -96,9 +117,9 @@ const tick = () => {
   // Update controls
   controls.update();
 
-  // Rotate asteroid
-  asteroid.rotation.x = elapsedTime * 0.5;
-  asteroid.rotation.y = elapsedTime * 0.5;
+  // // Rotate asteroid
+  // asteroid.rotation.x = elapsedTime * 0.5;
+  // asteroid.rotation.y = elapsedTime * 0.5;
 
   // Render
   renderer.render(scene, camera);
