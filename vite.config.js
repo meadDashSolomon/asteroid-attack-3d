@@ -8,6 +8,6 @@ export default defineConfig({
   server: { port: 2024 },
   plugins: [glsl()],
   build: {
-    outDir: "./dist",
+    outDir: "../dist",
   },
 });
