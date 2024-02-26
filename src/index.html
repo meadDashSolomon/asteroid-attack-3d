@@ -5,10 +5,54 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Asteroid Attack 3D</title>
+    <title>Asteroids Three-D</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet" />
   </head>
   <body>
     <canvas class="webgl"></canvas>
+    <!-- Intro Modal -->
+    <div
+      id="introModal"
+      class="modal-background">
+      <div class="modal-content">
+        <h2>Welcome to Asteroids Three-D!</h2>
+        <p>
+          Goal: Survive as long as possible without your ship colliding into an
+          asteroid.
+        </p>
+        <p>Controls:</p>
+        <ul>
+          <li>Cursor position steers your ship.</li>
+          <li>Click to fire.</li>
+          <li>Spacebar to pause.</li>
+        </ul>
+        <button
+          id="startGameButton"
+          class="modal-button">
+          Start Game
+        </button>
+      </div>
+    </div>
+    <!-- End Game Modal -->
+    <div
+      id="endGameModal"
+      class="modal-background">
+      <div class="modal-content">
+        <h2>Game Over!</h2>
+        <p id="finalScore"></p>
+        <button
+          id="restartButton"
+          class="modal-button">
+          Restart Game
+        </button>
+      </div>
+    </div>
     <script
       type="module"
       src="./script.js"></script>
