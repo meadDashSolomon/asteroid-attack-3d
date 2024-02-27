@@ -1,7 +1,7 @@
 # Asteroids Three-D
 
 A Game for Bruno Simon's Three.js Journey Solar System Challenge.
--- Deployed link coming soon
+https://asteroid-attack-3d.vercel.app/
 
 ## Table of Contents
 
@@ -24,17 +24,27 @@ Asteroids Three-D is a three-dimensional update on Atari's asteroids game. The p
 - ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 - ![GLSL](https://img.shields.io/badge/GLSL-%23FFFFFF.svg?style=for-the-badge&logo=opengl&logoColor=black)
 
-# Demo
-
--- Coming soon
-
 # How to install and run this project
 
--- Coming soon
+1. Clone the repo to your computer in your desired folder
+
+`git clone git@github.com:meadDashSolomon/asteroid-attack-3d.git`
+
+2. Install all dependencies by running
+
+`npm install`
+
+3. It's time to start your development server and vite server! Run
+
+`npm run dev`
+
+in your command line, and check out the project at localhost:5173 in your browser. Have fun!
 
 # Future Enhancements
 
 - [ ] loading animations
+- [ ] optimize for mobile
+- [ ] add realistic textures to the planets and sun
 - [ ] banked turns
 - [ ] non linear speed reduction on turns
 - [ ] powerups and more types of projectiles
