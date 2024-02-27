@@ -1,7 +1,8 @@
 # Asteroids Three-D
 
 A Game for Bruno Simon's Three.js Journey Solar System Challenge.
-https://asteroid-attack-3d.vercel.app/
+
+Deployed Link: https://asteroid-attack-3d.vercel.app/
 
 ## Table of Contents
 
